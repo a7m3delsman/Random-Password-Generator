@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta thhp-equiv="X-UA-Compatible" content="IE=edge ,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Random Password Generator</title>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg></script>
+  </head>
+  <body>
+    <center><h1 class="rpg">Random Password Generator</h1></center>
+    
+    <div class="container">
+      <label><h2>Select password type: </h2></label>
+    
+      <label  class="numlable" for="numbers">Numbers</label>
+      <input type="checkbox" id="numbers" name="numbers" value="numbers" checked>
+    
+      <label  class="numlable" for="letters">Letters</label>
+      <input type="checkbox" id="letters" name="letters" value="letters" checked>
+    
+      <label  class="numlable" for="symbols">Symbols</label>
+      <input type="checkbox" id="symbols" name="symbols" value="symbols">
+    
+    
+      <label for="password-length"><h2>Enter password length: </h2></label>
+      <input type="number" id="password-length" min="1" max="33" value="8" required>
+    
+      <button id="generate-password" onclick="generatePassword()">Generate Password</button>
+      <pre id="password-result"></pre>
+      <button id="copy-password" onclick="copyPassword()">Copy Password</button>
+    </div>
+    
+   
+    <br>
+    <fieldset>
+      <legend style="color: rgb(139, 46, 18); font-size: 50px; text-align: center;">Why should we have a strong password ?!</legend>
+      <p>Having a strong password is becoming increasingly important in today's digital age.
+        <br>
+       With the rise of cybercrime and online hacking, protecting your personal and financial information has never been more crucial. <br>
+       In this article, we will discuss why having a strong password is so important and offer tips on how you can create <br>
+   
+   Firstly, a strong password is important because it helps prevent unauthorized access to your accounts. <br>
+   A weak password, such as "password123" or "123456", is easy for hackers to guess or crack, leaving you vulnerable to attack. <br> 
+   A strong password, on the other hand, is more difficult to guess and provides an added layer of protection against cybercriminals. <br>
+   
+   Secondly, a strong password can help protect your identity. <br>
+   If someone gains access to your personal information, they can use it to steal your identity, open credit accounts in your name, and commit other fraud. <br>
+   By using a strong password, you can help prevent this from happening and keep your personal information safe. <br>
+   
+   Finally, having a strong password is crucial for protecting your financial information. <br>
+   With many people storing their bank account and credit card details online, it is important to have a password that is strong enough to prevent unauthorized access. <br>
+    A strong password can help prevent financial fraud and other cybercrimes, ultimately saving you time, money, and stress. <br>
+   
+   So, 
+   how can you create a strong password? Here are a few tips: <br>
+   
+    1- Use a combination of uppercase and lowercase letters, numbers, and special characters. <br>
+    2- Avoid using personal information such as your name, birthdate, or address. <br>
+    3- Use our site to create a strong word made up of letters, symbols and numbers.<br>
+    4- Use a different password for each account. <br>
+    5-Change your passwords regularly. <br>
+   In conclusion, having a strong password is essential for protecting your personal and financial information online. <br>
+   By following the tips outlined in this article, you can create a strong password that is difficult for hackers to guess or crack, ultimately helping to keep your information safe and secure.
+     </p>
+    </fieldset>
+    <p style="color: rgb(5, 5, 5); text-align: center; border: none;" id="currentTime"></p>
+    
+    
+    <hr style="color: rgb(216, 17, 17);" >
+    <script src="script.js"></script>
+    <div style="background-color: black; animation-delay: 0ms;" >
+       
+      <center>
+        <br>
+        <h1 style="color: cornsilk;">This Site Was Designed By : Ahmed ELsaman</h1>
+        
+        <h2 style="color: cornsilk;">You Can Contact Me In : </h2><br>
+        
+      
+    </div>
+      
+   
+      </center>
+      
+    </div>
+    <div class="social">
+      <div class="text2">
+          <div class="text3"> 
+              <a href="https://www.facebook.com/ahmed.elsaman.5099?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </div>
+          <span>Facebook</span>
+      </div>
+
+      <div class="text2">
+          <div class="text3"> 
+              <a href="https://www.youtube.com/channel/UC1_6896L0ur6KUGWcE_ucDQ" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+          <span>YouTube</span>
+      </div>
+
+      <div class="text2">
+          <div class="text3"> 
+              <a href="https://instagram.com/a7med_3lsaman?igshid=ZDc4ODBmNjlmNQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+          <span>Instagram</span>
+      </div>
+
+      <div class="text2">
+          <div class="text3"> 
+              <a href="https://wa.me/qr/PQKNYIJANYQKJ1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <span>WhatsApp</span>
+      </div>
+  </div>
+  
+    <h6 style="color: cornsilk;text-align: center;background-color: black;">2022 - 2023 <br> </h6>
+    
+  
+  
+  </body>
+</html>
