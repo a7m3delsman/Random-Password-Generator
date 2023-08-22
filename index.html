@@ -3,14 +3,14 @@
   <head> 
     <meta charset="UTF-8">
     <meta thhp-equiv="X-UA-Compatible" content="IE=edge ,chrome=1">
-    <link rel="icon" href="random-password-generator.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="random-password-generator.ico">
     <title>Random Password Generator</title>
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg></script>
   </head>
   <body>
-    <center><h1 class="rpg">Random Password Generator</h1></center>
+    <center><h1 class="title">Random Password Generator</h1></center>
     
     <div class="container">
       <label><h2>Select password type: </h2></label>
@@ -25,19 +25,22 @@
       <input type="checkbox" id="symbols" name="symbols" value="symbols">
     
     
-      <label for="password-length"><h2>Enter password length: </h2></label>
+      <label for="password-length" ><h2>Enter password length: </h2></label>
       <input type="number" id="password-length" min="1" max="33" value="8" required>
     
-      <button id="generate-password" onclick="generatePassword()">Generate Password</button>
+      <button id="generate-password" class="generate-password" onclick="generatePassword(); playClickSound();">Generate Password</button>
       <pre id="password-result"></pre>
-      <button id="copy-password" onclick="copyPassword()">Copy Password</button>
+      <center>
+        <button class="copy-password" id="copy-password" onclick="copyPassword(); playClickSound();">Copy Password</button>
+      </center>
+     
     </div>
     
    
     <br>
     <fieldset>
-      <legend style="color: rgb(139, 46, 18); font-size: 50px; text-align: center;">Why should we have a strong password ?!</legend>
-      <p>Having a strong password is becoming increasingly important in today's digital age.
+      <legend style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(139, 46, 18); font-size: 30px; text-align: center;">Why should we have a strong password ?!</legend>
+      <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Having a strong password is becoming increasingly important in today's digital age.
         <br>
        With the rise of cybercrime and online hacking, protecting your personal and financial information has never been more crucial. <br>
        In this article, we will discuss why having a strong password is so important and offer tips on how you can create <br>
@@ -66,16 +69,19 @@
    By following the tips outlined in this article, you can create a strong password that is difficult for hackers to guess or crack, ultimately helping to keep your information safe and secure.
      </p>
     </fieldset>
-    <p style="color: rgb(5, 5, 5); text-align: center; border: none;" id="currentTime"></p>
     
+   <br>
+    <center>
+      <time id="datetime"></time>
+    </center>
+  <br><br>
     
-    <hr style="color: rgb(216, 17, 17);" >
-    <script src="script.js"></script>
     <div style="background-color: black; animation-delay: 0ms;" >
        
       <center>
+        
         <br>
-        <h1 style="color: cornsilk;">This Site Was Designed By : Ahmed ELsaman</h1>
+        <h1 style="color: cornsilk;">This WebSite Was Designed By : Ahmed ELsaman</h1>
         
         <h2 style="color: cornsilk;">You Can Contact Me In : </h2><br>
         
@@ -116,9 +122,17 @@
       </div>
   </div>
   
-    <h6 style="color: cornsilk;text-align: center;background-color: black;">2022 - 2023 <br> </h6>
+  <footer style="background-color: black; border: none; margin-top: -30px; margin-bottom: -30px; text-align: center;">
+		<br><br>
+    <h6 title="Copy Rights" style="font-size: 15px; color: cornsilk; margin-top: -5px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">&copy; 2023 Ahmed EL-Saman. All Rights Reserved.</h6>
+		<br>
+	  </footer>
     
   
-  
+    <audio id="clickSound">
+      <source src="button-click.mp3" type="audio/mpeg">
+    
+      </audio>
+    <script src="script.js"></script>
   </body>
 </html>
