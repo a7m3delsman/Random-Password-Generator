@@ -16,39 +16,88 @@ body {
   text-align: center;
   
 }
+button:active {
+  background-color: #d9d9d9;
+  transform: scale(0.95);
+}
+button.delete {
+  background-color: #ff5d5d;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(255, 93, 93, 0.4);
+}
+
+button.delete:hover {
+  background-color: #ff7373;
+}
+
+button.delete:active {
+  background-color: #dd0000;
+  transform: scale(0.95);
+}
 h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 2rem;
   margin-bottom: 20px;
 }
 label {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: block;
   margin-bottom: 10px;
 }
 input[type="number"] {
-  padding: 10px;
+  
+  padding: 11px;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   margin-bottom: 20px;
 }
-button {
-  background-color: #4CAF50;
+
+
+.generate-password{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #007904;
   color: white;
   padding: 10px;
   font-size: 1rem;
-  border: none;
+
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  
 }
-button:hover {
+
+.copy-password{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #ffffff;
+  color: rgb(255, 0, 0);
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  border: 2px solid red;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.generate-password:hover {
   background-color: #8f8f8f;
   color: black;
 }
+.copy-password:hover {
+  background-color: #ff0000;
+  color: rgb(255, 255, 255);
+}
 pre {
+  display: none;
   font-size: 2rem;
-  font-family: monospace;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: #eeeeeec2;
   padding: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
   margin-bottom: 20px;
 }
@@ -72,13 +121,14 @@ p {
   font-family: Arial, sans-serif;
   margin-bottom: 20px;
   line-height: 25px;
-  border: 1px solid #ccc;
+ 
   padding: 10px;
 }
-.rpg
+.title
 {
-  font-size: 75px;
-  color: rgb(192, 31, 31);
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(156, 11, 11);
 }
 .numlable{
   display: inline-block;
@@ -96,10 +146,35 @@ fieldset{
 
   padding: 10px;
   margin: 10px;
-  border: none;
+  border: 2px solid rgb(97, 90, 90);
+}
+#datetime {
+  text-align: center;
+ 
+  display: inline-block;
+  padding: 10px;
+  background-color: #034b01;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  animation: pulse 1s ease-in-out infinite;
+  color: #fff;
+  margin-top: 0px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.03);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
 
 
 
