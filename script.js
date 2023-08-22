@@ -6,12 +6,15 @@ function generatePassword() {
   let characters = '';
   let passwordOutput = '';
 
-  if (isNaN(length) || length < 1 || length > 30) {
-    alert("Please enter a valid password length between 1 and 30.");
-    passwordResult.textContent = ''; // إعادة تعيين القيمة إلى فارغة
+  if (isNaN(length) || length < 4 || length > 30) {
+    alert("Please enter a valid password length between 4 and 30.");
+    passwordResult.textContent = ''; 
+    hideButton("copy-password");
+    hidepre("password-result");
     return;
   }
-
+  nohideButton("copy-password") ;
+  nohidepre("password-result");
   if (document.getElementById('numbers').checked) {
     characters += '0123456789';
   }
@@ -25,7 +28,7 @@ function generatePassword() {
   for (let i = 0; i < length; i++) {
     passwordOutput += characters.charAt(Math.floor(Math.random() * characters.length));
   }
-
+  
   passwordResult.textContent = passwordOutput;
 }
 
@@ -59,10 +62,40 @@ function copyPassword() {
     copyButton.textContent = "Copy Password";
   }, 2000);
 }
-function showTime() {
-	document.getElementById('currentTime').innerHTML = new Date().toUTCString();
+function updateTime() {
+  var d = new Date();
+  var n = d.toLocaleString();
+  document.getElementById("datetime").innerHTML = n;
 }
-showTime();
-setInterval(function () {
-	showTime();
-}, 1000);
+setInterval(updateTime, 1000);
+function nohidepre(preId) {
+  var pre = document.getElementById(preId);
+  if (pre) {
+    pre.style.display = "block";
+  }
+}
+function nohideButton(buttonId) {
+  var button = document.getElementById(buttonId);
+  if (button) {
+    button.style.display = "block";
+  }
+}
+
+function hidepre(preId) {
+  var pre = document.getElementById(preId);
+  if (pre) {
+    pre.style.display = "none";
+  }
+}
+function hideButton(buttonId) {
+  var button = document.getElementById(buttonId);
+  if (button) {
+    button.style.display = "none";
+  }
+}
+var audio = new Audio('button-click.mp3');
+function playClickSound() {
+    clickSound.currentTime = 0;
+    clickSound.play();
+  }
+  
