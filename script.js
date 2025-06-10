@@ -6,8 +6,8 @@ function generatePassword() {
   let characters = '';
   let passwordOutput = '';
 
-  if (isNaN(length) || length < 4 || length > 30) {
-    alert("Please enter a valid password length between 4 and 30.");
+  if (isNaN(length) || length < 1 || length > 30) {
+    alert("Please enter a valid password , Max length is 30 ");
     passwordResult.textContent = ''; 
     hideButton("copy-password");
     hidepre("password-result");
